@@ -26,6 +26,11 @@ dependencies = [
 dev = ["hatch", "pytest>=6", "pytest-cov", "coverage[toml]", "black", "ruff"]
 # TODO: (optional) add more optional dependencies in the same format of `dev`; if you want them installed in the dev environment, modify the pip install line in prepare-env.sh into `pip install -e .[dev,optional1,optional2]`
 
+[project.urls]
+# TODO: setup and add documentation link, e.g., readthedocs (but usually after developing some code)  # Documentation = ""
+Issues = "https://github.com/TODO_user_name/TODO_repo_name/issues"
+Source = "https://github.com/TODO_user_name/TODO_repo_name"
+
 [tool.hatch.version]
 path = "src/TODO_pkg_name/__about__.py"
 
