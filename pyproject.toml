@@ -42,7 +42,7 @@ parallel = true
 omit = ["src/TODO_pkg_name/__about__.py"]
 
 [tool.coverage.paths]
-seutil = ["src/TODO_pkg_name", "*/TODO_pkg_name/src/TODO_pkg_name"]
+TODO_pkg_name = ["src/TODO_pkg_name", "*/TODO_pkg_name/src/TODO_pkg_name"]
 tests = ["tests", "*/TODO_pkg_name/tests"]
 
 [tool.coverage.report]
