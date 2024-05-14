@@ -10,12 +10,10 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = { file = "LICENSE" }
 authors = [{ name = "TODO_your_name", email = "TODO_your@email.com" }]
+# TODO: select the appropriate classifiers on https://pypi.org/classifiers/
 classifiers = [
-    "Topic :: Utilities",
     "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "License :: OSI Approved :: Apache Software License",
+    "License :: OSI Approved :: MIT License",
     "Operating System :: POSIX :: Linux",
 ]
 dependencies = [
