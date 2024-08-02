@@ -2,7 +2,7 @@
 
 Steps for using this template:
 
-1. Replace `TODO_pkg_name` across the projects to your package name (based on the project name)
+1. Replace `TODO_pkg_name` across the project to your package name (based on the project name)
   * Only lower case letters, numbers, and `_` (not recommended) are allowed in the package name; do NOT use other symbols
   * Prefer concise names and acronyms, e.g., `teco` instead of `test_completion`
   * Don't forget to rename the `src/TODO_pkg_name` directory
