@@ -17,7 +17,8 @@ classifiers = [
     "Operating System :: POSIX :: Linux",
 ]
 dependencies = [
-# TODO: add dependencies, e.g., "seutil>=0.8.8",
+    "seutil",
+    # TODO: add dependencies, e.g., "numpy", "pandas"
 ]
 
 [project.optional-dependencies]
