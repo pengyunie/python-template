@@ -7,12 +7,12 @@ name = "TODO_pkg_name"
 dynamic = ["version"]
 description = "TODO_description"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 license = { file = "LICENSE" }
 authors = [{ name = "TODO_your_name", email = "TODO_your@email.com" }]
 # TODO: select the appropriate classifiers on https://pypi.org/classifiers/
 classifiers = [
-    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
     "License :: OSI Approved :: MIT License",
     "Operating System :: POSIX :: Linux",
 ]
@@ -50,11 +50,6 @@ exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]
 [tool.pytest.ini_options]
 addopts = "--ignore=deprecated --cov --cov-report xml:cov.xml"
 testpaths = ["tests"]
-
-# formatting (black)
-[tool.black]
-target-version = ["py38"]
-line-length = 120
 
 # linting (ruff)
 [tool.ruff]
