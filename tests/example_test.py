@@ -1,4 +1,4 @@
-from TODO_pkg_name.example_main import foo
+from todo_pkg_name.example_main import foo
 
 
 def test_foo():
