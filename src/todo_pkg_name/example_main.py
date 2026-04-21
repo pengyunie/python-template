@@ -1,5 +1,4 @@
 from pathlib import Path
-from typing import List
 
 import seutil as su
 from jsonargparse import CLI
@@ -22,14 +21,13 @@ class EntryPoint:
 
     Examples for this file:
     ```
-    python -m TODO_pkg_name.example_main --work_dir ./_work print --inputs=[1,2,3]
-    python -m TODO_pkg_name.example_main print  # use default values
+    python -m todo_pkg_name.example_main --work_dir ./_work show --inputs=[1,2,3]
+    python -m todo_pkg_name.example_main show  # use default values
     ```
 
-    You can also do `python -m TODO_pkg_name.example_main --help` to see the help message.
+    You can also do `python -m todo_pkg_name.example_main --help` to see the help message.
     """
 
-    # All arguments specified in the __init__ function are class-level arguments
     def __init__(
         self,
         work_dir: su.arg.RPath = Path(__file__).parent.parent.parent / "_work",
@@ -40,10 +38,9 @@ class EntryPoint:
     ):
         self.work_dir = work_dir
 
-    def print(self, inputs: List[int] = None):
-        # If the default value is a mutable data structure (like List), don't write in the function signature;
-        #   write None in the functional signature and check for it at the beginning of the function instead.
-        # Similar to List, there is also Dict, Tuple, Set, etc. that you can import from `typing`.
+    def show(self, inputs: list[int] | None = None):
+        # If the default value would be a mutable data structure (like list), don't write it in the
+        #   function signature; write None and check for it at the beginning of the function instead.
         if inputs is None:
             inputs = [0]
 
@@ -51,7 +48,7 @@ class EntryPoint:
         print(f"inputs: {inputs}")
         print(f"The result of foo() is {foo()}")
 
-    def read_args(self, f: float, i: int, s: str, strs: List[str]):
+    def read_args(self, f: float, i: int, s: str, strs: list[str]):
         # This lists some other typical types of arguments you can read from the command line.
         print(f"f: {f}")
         print(f"i: {i}")

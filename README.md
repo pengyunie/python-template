@@ -35,17 +35,17 @@ Steps for using this template:
 
    * `seutil` is a util library. There are some examples to use it in `example_main.py`.
      * In particular, `jsonargparse`, which is transitively installed by `seutil`, helps to parse command line arguments. Use it to read paths to inputs/outputs from command line, and avoid hardcoding them in code.
-   * `black` is a code formatter. Always format your Python code before committing.
-     * Command line: `black .` (run from `/`)
-     * VS Code: install `ms-python.black-formatter` plugin; then use `Format Document` command (`Ctrl+Shift+I` hotkey for me) & `Organize Imports` command (`Ctrl+Shift+O` hotkey for me) to format the code
-   * `ruff` is a code linter. Run it periodically to improve your code quality.
-     * Command line: `ruff check .` (run from `/`)
+   * `ruff` is code formatter + linter. Run it periodically to improve your code quality.
+     * Format code: `uv run ruff format .`
+     * Lint code: `uv run ruff check .` (use `--fix` to auto-fix safe issues)
      * VS Code: install `charliermarsh.ruff` plugin; suggestions should show up in the editor
+   * `ty` is static type checker (currently in beta; rules and diagnostics may evolve).
+     * Type check: `uv run ty check`
 
 5. Start developing your code.
   * If you need to add new dependencies, add them with `uv add <package_name>`; you may need to run `uv sync` to synchronize the virtual environment if you work on multiple machines. Details see [uv documentation](https://docs.astral.sh/uv/concepts/projects/dependencies/).
-  * Follow formatting conventions, automatically format with black: `uv run black .`
-  * Follow linting rules, run ruff to check your code for warnings and type errors: `uv run ruff check`
-  * Write [type hints](https://docs.python.org/3/library/typing.html).
+  * Follow formatting conventions: `uv run ruff format .`
+  * Follow linting rules: `uv run ruff check .`
+  * Write [type hints](https://docs.python.org/3/library/typing.html) and check with `uv run ty check`.
   * Write docstrings and tests.
   * Update this README as you work on the project, e.g., update summaries, add usage instructions, etc.
